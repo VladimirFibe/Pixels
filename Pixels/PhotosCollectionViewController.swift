@@ -15,15 +15,26 @@ class PhotosCollectionViewController: UICollectionViewController {
                            target: self,
                            action: #selector(addBarButtonTapped))
   }()
-  @objc func addBarButtonTapped() {
-    
-  }
+
+  private lazy var actionBarButtonItem: UIBarButtonItem = {
+    return UIBarButtonItem(barButtonSystemItem: .action,
+                           target: self,
+                           action: #selector(actionBarButtonTapped))
+  }()
   override func viewDidLoad() {
     super.viewDidLoad()
     setupNavigationBar()
     setupCollectionView()
   }
+  // MARK: - NavigationItems action
+  @objc func addBarButtonTapped() {
+    print("DEBUG: \(#function)")
+  }
+  @objc func actionBarButtonTapped() {
+    print("DEBUG: \(#function)")
+  }
   
+  // MARK: - Setup UI Elements
   private func setupCollectionView() {
     collectionView.register(UICollectionViewCell.self,
                             forCellWithReuseIdentifier: cellId)
@@ -36,7 +47,10 @@ class PhotosCollectionViewController: UICollectionViewController {
     titleLabel.textColor = #colorLiteral(red: 0.5742436647, green: 0.5705327392, blue: 0.5704542994, alpha: 1) // 807F7F
     
     navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
+    navigationItem.rightBarButtonItems = [actionBarButtonItem, addBarButtonItem]
   }
+  
+  // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
   override func collectionView(_ collectionView: UICollectionView,
                                numberOfItemsInSection section: Int) -> Int {
     return 5
