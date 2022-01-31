@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FBA4EA527A68A72004EFD7D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA4EA427A68A72004EFD7D /* NetworkService.swift */; };
+		1FBA4EA827A6A4E7004EFD7D /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA4EA727A6A4E7004EFD7D /* NetworkDataFetcher.swift */; };
+		1FBA4EAA27A6A550004EFD7D /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA4EA927A6A550004EFD7D /* SearchResults.swift */; };
+		1FEB7BE527A7C6D5006C3774 /* PhotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB7BE427A7C6D5006C3774 /* PhotosCell.swift */; };
+		1FEB7BE827A7D182006C3774 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1FEB7BE727A7D182006C3774 /* SDWebImage */; };
 		1FFD139827A5C26E00E3FCA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD139727A5C26E00E3FCA4 /* AppDelegate.swift */; };
 		1FFD139A27A5C26E00E3FCA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD139927A5C26E00E3FCA4 /* SceneDelegate.swift */; };
 		1FFD139C27A5C26E00E3FCA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFD139B27A5C26E00E3FCA4 /* ViewController.swift */; };
@@ -18,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FBA4EA427A68A72004EFD7D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1FBA4EA727A6A4E7004EFD7D /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		1FBA4EA927A6A550004EFD7D /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		1FEB7BE427A7C6D5006C3774 /* PhotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCell.swift; sourceTree = "<group>"; };
 		1FFD139427A5C26E00E3FCA4 /* Pixels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFD139727A5C26E00E3FCA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FFD139927A5C26E00E3FCA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,12 +44,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FEB7BE827A7D182006C3774 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FBA4EA627A69FAF004EFD7D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1FBA4EA427A68A72004EFD7D /* NetworkService.swift */,
+				1FBA4EA727A6A4E7004EFD7D /* NetworkDataFetcher.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1FBA4EAB27A6A576004EFD7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FBA4EA927A6A550004EFD7D /* SearchResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FBA4EAC27A78E70004EFD7D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1FFD139B27A5C26E00E3FCA4 /* ViewController.swift */,
+				1FFD13AB27A5C4B300E3FCA4 /* MainTabBarController.swift */,
+				1FFD13AD27A5C62100E3FCA4 /* PhotosCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		1FFD138B27A5C26E00E3FCA4 = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +97,15 @@
 		1FFD139627A5C26E00E3FCA4 /* Pixels */ = {
 			isa = PBXGroup;
 			children = (
+				1FBA4EAB27A6A576004EFD7D /* Model */,
+				1FBA4EA627A69FAF004EFD7D /* Service */,
+				1FBA4EAC27A78E70004EFD7D /* Controllers */,
 				1FFD139727A5C26E00E3FCA4 /* AppDelegate.swift */,
+				1FEB7BE427A7C6D5006C3774 /* PhotosCell.swift */,
 				1FFD139927A5C26E00E3FCA4 /* SceneDelegate.swift */,
-				1FFD139B27A5C26E00E3FCA4 /* ViewController.swift */,
-				1FFD13AB27A5C4B300E3FCA4 /* MainTabBarController.swift */,
-				1FFD13AD27A5C62100E3FCA4 /* PhotosCollectionViewController.swift */,
 				1FFD139D27A5C26E00E3FCA4 /* Main.storyboard */,
-				1FFD13A027A5C26F00E3FCA4 /* Assets.xcassets */,
 				1FFD13A227A5C26F00E3FCA4 /* LaunchScreen.storyboard */,
+				1FFD13A027A5C26F00E3FCA4 /* Assets.xcassets */,
 				1FFD13A527A5C26F00E3FCA4 /* Info.plist */,
 			);
 			path = Pixels;
@@ -89,6 +127,9 @@
 			dependencies = (
 			);
 			name = Pixels;
+			packageProductDependencies = (
+				1FEB7BE727A7D182006C3774 /* SDWebImage */,
+			);
 			productName = Pixels;
 			productReference = 1FFD139427A5C26E00E3FCA4 /* Pixels.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 1FFD138B27A5C26E00E3FCA4;
+			packageReferences = (
+				1FEB7BE627A7D182006C3774 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 1FFD139527A5C26E00E3FCA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,11 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FBA4EA827A6A4E7004EFD7D /* NetworkDataFetcher.swift in Sources */,
 				1FFD139C27A5C26E00E3FCA4 /* ViewController.swift in Sources */,
 				1FFD139827A5C26E00E3FCA4 /* AppDelegate.swift in Sources */,
 				1FFD13AC27A5C4B300E3FCA4 /* MainTabBarController.swift in Sources */,
 				1FFD13AE27A5C62100E3FCA4 /* PhotosCollectionViewController.swift in Sources */,
+				1FBA4EA527A68A72004EFD7D /* NetworkService.swift in Sources */,
+				1FBA4EAA27A6A550004EFD7D /* SearchResults.swift in Sources */,
 				1FFD139A27A5C26E00E3FCA4 /* SceneDelegate.swift in Sources */,
+				1FEB7BE527A7C6D5006C3774 /* PhotosCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +348,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pixels/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Our application needs permession to write photos to your photos library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -329,6 +378,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pixels/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Our application needs permession to write photos to your photos library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -370,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1FEB7BE627A7D182006C3774 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1FEB7BE727A7D182006C3774 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FEB7BE627A7D182006C3774 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FFD138C27A5C26E00E3FCA4 /* Project object */;
 }
