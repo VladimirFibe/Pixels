@@ -31,4 +31,7 @@ class NetworkDataFetcher {
       return nil
     }
   }
+  func fethcPhoto() {
+    
+  }
 }

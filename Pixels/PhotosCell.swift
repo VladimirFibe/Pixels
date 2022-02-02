@@ -18,6 +18,7 @@ class PhotosCell: UICollectionViewCell {
     imageView.alpha = 0
     return imageView
   }()
+  
   let photoImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,10 +26,10 @@ class PhotosCell: UICollectionViewCell {
     imageView.contentMode = .scaleAspectFill
     return imageView
   }()
+  
   var unsplashPhoto: UnSplashPhoto! {
     didSet {
-      let photoUrl = unsplashPhoto.urls["regular"]
-      guard let imageUrl = photoUrl, let url = URL(string: imageUrl) else { return }
+      guard let imageUrl = unsplashPhoto.urls["regular"], let url = URL(string: imageUrl) else { return }
       photoImageView.sd_setImage(with: url, completed: nil)
     }
   }

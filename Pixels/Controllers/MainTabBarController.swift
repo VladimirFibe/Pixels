@@ -11,7 +11,7 @@ class MainTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     let photos = PhotosCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
-    let favourites = ViewController()
+    let favourites = FavoritePhotosViewController(collectionViewLayout: UICollectionViewFlowLayout())
     viewControllers = [
       generateNavigationController(rootViewController: photos,
                                    title: "Photos",

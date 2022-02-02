@@ -11,7 +11,7 @@ class NetworkService {
   func request(searchTerm: String, completion: @escaping (Data?, Error?) -> Void) {
     let url = self.url(params: ["query": searchTerm, "page": "1", "per_page": "30"])
     var request = URLRequest(url: url)
-    request.allHTTPHeaderFields = ["Authorization": "Client-ID кюч"]
+    request.allHTTPHeaderFields = ["Authorization": "Client-ID "]
     request.httpMethod = "get"
     let task = createDataTask(from: request, completion: completion)
     task.resume()
